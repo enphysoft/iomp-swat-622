@@ -1,0 +1,70 @@
+date;  time ifort-sum-srl-v1.x ;date;echo 
+Sun Mar  9 09:47:53 HST 2014
+pi value =      3.1415926535897682 run time =       6.98799992
+6.98user 0.00system 0:06.99elapsed 99%CPU (0avgtext+0avgdata 3968maxresident)k
+0inputs+0outputs (0major+297minor)pagefaults 0swaps
+Sun Mar  9 09:48:00 HST 2014
+
+date;  time ifort-sum-srl-v2.x ;date;echo 
+Sun Mar  9 09:48:00 HST 2014
+pi value =      3.1415926535897682 run time =       6.98799992
+6.98user 0.00system 0:06.99elapsed 99%CPU (0avgtext+0avgdata 4016maxresident)k
+0inputs+0outputs (0major+300minor)pagefaults 0swaps
+Sun Mar  9 09:48:07 HST 2014
+
+date;  time ifort-sum-omp-v1.x ;date;echo 
+Sun Mar  9 09:48:07 HST 2014
+pi value =      3.1415926535898833 run time =       6.98400021
+6.98user 0.00system 0:01.00elapsed 696%CPU (0avgtext+0avgdata 9136maxresident)k
+0inputs+0outputs (0major+672minor)pagefaults 0swaps
+Sun Mar  9 09:48:08 HST 2014
+
+date;  time ifort-sum-omp-v2.x ;date;echo 
+Sun Mar  9 09:48:08 HST 2014
+pi value =      3.1415926535898833 run time =       6.96000004
+6.96user 0.00system 0:01.00elapsed 694%CPU (0avgtext+0avgdata 9264maxresident)k
+0inputs+0outputs (0major+693minor)pagefaults 0swaps
+Sun Mar  9 09:48:09 HST 2014
+
+date;  time ifort-sum-omp-v3.x ;date;echo 
+Sun Mar  9 09:48:09 HST 2014
+pi value =      3.1415926535898833 run time =       6.92799997
+6.92user 0.00system 0:01.00elapsed 691%CPU (0avgtext+0avgdata 9248maxresident)k
+0inputs+0outputs (0major+671minor)pagefaults 0swaps
+Sun Mar  9 09:48:10 HST 2014
+
+date; time gfort-sum-srl-v1.x  ;date;echo  
+Sun Mar  9 09:48:10 HST 2014
+pi value =      3.1415926535899708 run time =      32.25600052
+32.25user 0.00system 0:32.26elapsed 99%CPU (0avgtext+0avgdata 3632maxresident)k
+0inputs+0outputs (0major+272minor)pagefaults 0swaps
+Sun Mar  9 09:48:42 HST 2014
+
+date; time gfort-sum-srl-v2.x  ;date;echo  
+Sun Mar  9 09:48:42 HST 2014
+pi value =      3.1415926535899708 run time =      32.25600052
+32.25user 0.00system 0:32.26elapsed 99%CPU (0avgtext+0avgdata 3632maxresident)k
+0inputs+0outputs (0major+273minor)pagefaults 0swaps
+Sun Mar  9 09:49:14 HST 2014
+
+date; time gfort-sum-omp-v1.x  ;date;echo  
+Sun Mar  9 09:49:14 HST 2014
+pi value =      3.1415926535897691 run time =      33.56800079
+33.56user 0.00system 0:04.29elapsed 782%CPU (0avgtext+0avgdata 4528maxresident)k
+0inputs+0outputs (0major+331minor)pagefaults 0swaps
+Sun Mar  9 09:49:19 HST 2014
+
+date; time gfort-sum-omp-v2.x  ;date;echo  
+Sun Mar  9 09:49:19 HST 2014
+pi value =      3.1415926535897687 run time =      33.56800079
+33.56user 0.00system 0:04.24elapsed 790%CPU (0avgtext+0avgdata 4560maxresident)k
+0inputs+0outputs (0major+333minor)pagefaults 0swaps
+Sun Mar  9 09:49:23 HST 2014
+
+date; time gfort-sum-omp-v3.x  ;date;echo  
+Sun Mar  9 09:49:23 HST 2014
+pi value =      3.1415926535897691 run time =      32.28799820
+32.28user 0.00system 0:04.08elapsed 790%CPU (0avgtext+0avgdata 4560maxresident)k
+0inputs+0outputs (0major+333minor)pagefaults 0swaps
+Sun Mar  9 09:49:27 HST 2014
+

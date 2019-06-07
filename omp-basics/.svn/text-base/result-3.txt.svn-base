@@ -1,0 +1,92 @@
+albertsk@fractal:~/openmp$ make all
+ifort -openmp sum-omp-v3.f -o ifort-sum-omp-v3.x
+gfort -fopenmp sum-omp-v3.f -o gfort-sum-omp-v3.x
+ifort -openmp sum-omp-v2.f -o ifort-sum-omp-v2.x
+gfort -fopenmp sum-omp-v2.f -o gfort-sum-omp-v2.x
+ifort -openmp sum-omp-v1.f -o ifort-sum-omp-v1.x
+gfort -fopenmp sum-omp-v1.f -o gfort-sum-omp-v1.x
+ifort sum-srl-v2.f -o ifort-sum-srl-v2.x
+gfort sum-srl-v2.f -o gfort-sum-srl-v2.x
+ifort sum-srl-v1.f -o ifort-sum-srl-v1.x
+gfort sum-srl-v1.f -o gfort-sum-srl-v1.x
+albertsk@fractal:~/openmp$ make runall
+date;  time ifort-sum-srl-v1.x ;date;echo 
+Sun Mar  9 10:08:45 HST 2014
+n = 2100000000    pi =      3.1415926535897722
+time =     14.67599964
+14.67user 0.00system 0:14.67elapsed 99%CPU (0avgtext+0avgdata 3968maxresident)k
+0inputs+0outputs (0major+297minor)pagefaults 0swaps
+Sun Mar  9 10:09:00 HST 2014
+
+date;  time ifort-sum-srl-v2.x ;date;echo 
+Sun Mar  9 10:09:00 HST 2014
+n = 2100000000    pi =      3.1415926535897722
+time =     14.67599964
+14.67user 0.00system 0:14.67elapsed 99%CPU (0avgtext+0avgdata 4000maxresident)k
+0inputs+0outputs (0major+299minor)pagefaults 0swaps
+Sun Mar  9 10:09:14 HST 2014
+
+date;  time ifort-sum-omp-v1.x ;date;echo 
+Sun Mar  9 10:09:14 HST 2014
+n = 2100000000    pi =      3.1415926535897727
+time =     14.43999958
+14.44user 0.00system 0:02.00elapsed 721%CPU (0avgtext+0avgdata 9184maxresident)k
+0inputs+0outputs (0major+673minor)pagefaults 0swaps
+Sun Mar  9 10:09:16 HST 2014
+
+date;  time ifort-sum-omp-v2.x ;date;echo 
+Sun Mar  9 10:09:16 HST 2014
+n = 2100000000    pi =      3.1415926535897731
+time =     14.46000004
+14.44user 0.01system 0:02.00elapsed 721%CPU (0avgtext+0avgdata 9344maxresident)k
+0inputs+0outputs (0major+693minor)pagefaults 0swaps
+Sun Mar  9 10:09:18 HST 2014
+
+date;  time ifort-sum-omp-v3.x ;date;echo 
+Sun Mar  9 10:09:18 HST 2014
+n = 2100000000    pi =      3.1415926535897727
+time =     14.46800041
+14.45user 0.01system 0:02.00elapsed 722%CPU (0avgtext+0avgdata 9168maxresident)k
+0inputs+0outputs (0major+672minor)pagefaults 0swaps
+Sun Mar  9 10:09:20 HST 2014
+
+date; time gfort-sum-srl-v1.x  ;date;echo  
+Sun Mar  9 10:09:20 HST 2014
+n = 2100000000    pi =      3.1415926535894885
+time =     67.73600006
+67.73user 0.00system 1:07.74elapsed 99%CPU (0avgtext+0avgdata 3648maxresident)k
+0inputs+0outputs (0major+274minor)pagefaults 0swaps
+Sun Mar  9 10:10:28 HST 2014
+
+date; time gfort-sum-srl-v2.x  ;date;echo  
+Sun Mar  9 10:10:28 HST 2014
+n = 2100000000    pi =      3.1415926535894885
+time =     67.73600006
+67.73user 0.00system 1:07.73elapsed 99%CPU (0avgtext+0avgdata 3648maxresident)k
+0inputs+0outputs (0major+273minor)pagefaults 0swaps
+Sun Mar  9 10:11:36 HST 2014
+
+date; time gfort-sum-omp-v1.x  ;date;echo  
+Sun Mar  9 10:11:36 HST 2014
+n = 2100000000    pi =      3.1415926535898091
+time =     70.47200012
+70.46user 0.00system 0:08.81elapsed 799%CPU (0avgtext+0avgdata 4560maxresident)k
+0inputs+0outputs (0major+333minor)pagefaults 0swaps
+Sun Mar  9 10:11:45 HST 2014
+
+date; time gfort-sum-omp-v2.x  ;date;echo  
+Sun Mar  9 10:11:45 HST 2014
+n = 2100000000    pi =      3.1415926535898091
+time =     70.46399689
+70.46user 0.00system 0:08.81elapsed 799%CPU (0avgtext+0avgdata 4576maxresident)k
+0inputs+0outputs (0major+334minor)pagefaults 0swaps
+Sun Mar  9 10:11:53 HST 2014
+
+date; time gfort-sum-omp-v3.x  ;date;echo  
+Sun Mar  9 10:11:53 HST 2014
+n = 2100000000    pi =      3.1415926535898091
+time =     67.75599670
+67.75user 0.00system 0:08.47elapsed 799%CPU (0avgtext+0avgdata 4576maxresident)k
+0inputs+0outputs (0major+335minor)pagefaults 0swaps
+Sun Mar  9 10:12:02 HST 2014
+

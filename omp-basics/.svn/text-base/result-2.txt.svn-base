@@ -1,0 +1,60 @@
+date;  time ifort-sum-srl-v1.x ;date;echo 
+Sun Mar  9 10:04:21 HST 2014
+n = 1000000000    pi =      3.1415926535897682
+time =      6.98799992
+Sun Mar  9 10:04:28 HST 2014
+
+date;  time ifort-sum-srl-v2.x ;date;echo 
+Sun Mar  9 10:04:28 HST 2014
+n = 1000000000    pi =      3.1415926535897682
+time =      6.98799992
+Sun Mar  9 10:04:35 HST 2014
+
+date;  time ifort-sum-omp-v1.x ;date;echo 
+Sun Mar  9 10:04:35 HST 2014
+n = 1000000000    pi =      3.1415926535898833
+time =      6.98000002
+Sun Mar  9 10:04:36 HST 2014
+
+date;  time ifort-sum-omp-v2.x ;date;echo 
+Sun Mar  9 10:04:36 HST 2014
+n = 1000000000    pi =      3.1415926535898833
+time =      6.96400023
+Sun Mar  9 10:04:37 HST 2014
+
+date;  time ifort-sum-omp-v3.x ;date;echo 
+Sun Mar  9 10:04:37 HST 2014
+n = 1000000000    pi =      3.1415926535898833
+time =      6.93200016
+Sun Mar  9 10:04:38 HST 2014
+
+date; time gfort-sum-srl-v1.x  ;date;echo  
+Sun Mar  9 10:04:38 HST 2014
+n = 1000000000    pi =      3.1415926535899708
+time =     32.25600052
+Sun Mar  9 10:05:11 HST 2014
+
+date; time gfort-sum-srl-v2.x  ;date;echo  
+Sun Mar  9 10:05:11 HST 2014
+n = 1000000000    pi =      3.1415926535899708
+time =     32.25600052
+Sun Mar  9 10:05:43 HST 2014
+
+date; time gfort-sum-omp-v1.x  ;date;echo  
+Sun Mar  9 10:05:43 HST 2014
+n = 1000000000    pi =      3.1415926535897691
+time =     33.57199860
+Sun Mar  9 10:05:47 HST 2014
+
+date; time gfort-sum-omp-v2.x  ;date;echo  
+Sun Mar  9 10:05:47 HST 2014
+n = 1000000000    pi =      3.1415926535897687
+time =     33.57600021
+Sun Mar  9 10:05:51 HST 2014
+
+date; time gfort-sum-omp-v3.x  ;date;echo  
+Sun Mar  9 10:05:51 HST 2014
+n = 1000000000    pi =      3.1415926535897691
+time =     32.27199936
+Sun Mar  9 10:05:55 HST 2014
+

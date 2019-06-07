@@ -1,0 +1,52 @@
+Sun Mar  9 09:05:32 HST 2014
+
+OMP directive reduction and having local variable give the same speed up.
+Compare sum-omp-v1.f and sum-omp-v2.f
+
+* OMP SINGLE directives does not make the execution fast. I
+It is better not to use it.
+ 
+! !$OMP SINGLE
+      pi = h * sumtot
+! !$OMP END SINGLE
+
+The final openmp code for simiple sum is sum-omp-v3.f: 
+!### sum-omp-v3.f ########################################
+      implicit none 
+      double precision :: f, h, pi, x, a, sumtot 
+      integer :: i, n 
+      real :: Tstr, Tend
+      include "number.f"
+
+      h = 1.0 d0 / dble(n)
+      call CPU_TIME(Tstr) 
+           call calc_pi (h,n,pi)
+      call CPU_TIME(Tend) 
+      include "show.f"
+      stop
+      end
+!============================================
+      double precision function f(a)
+      double precision :: a
+      f  = 4.d0 / (1.d0 + a*a)
+      return
+      end 
+
+!============================================
+      subroutine calc_pi (h,n,pi)
+      integer :: i, n
+      double precision :: f, h, pi, x, sumtot
+      sumtot = 0.0 d0
+
+!$OMP PARALLEL PRIVATE (i,x)
+!$OMP DO REDUCTION(+:sumtot)
+         do i = 1 , n
+         x = h * ( DBLE ( i ) -0.5 d0 )
+         sumtot = sumtot + f ( x )
+         end do
+!$OMP END DO
+!$OMP END PARALLEL 
+
+      pi = h * sumtot
+      end subroutine 
+!#######################################################
