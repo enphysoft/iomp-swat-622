@@ -1,0 +1,48 @@
+program Albert
+    integer  :: x,y,n,niter, iter,  asize
+    parameter (n=100, niter=365*24)
+    real :: T1, T2, T3, T4, T9
+    real ::  b(n*n)
+
+!===============================
+    call CPU_TIME(T1)
+    do iter=1,niter
+       do i=1,n*n
+             b(i) = 1.0
+       enddo
+    enddo
+    call CPU_TIME(T2)
+    write (*,*)iter, b(1)
+    write(*,*) " using do loop", T2-T1
+
+!===================================
+    do iter=1,niter
+       do j=n*n,1,-1
+       !do j=1,n*n
+               b(j) = 2.0
+       enddo
+    enddo
+    call CPU_TIME(T3)
+    write (*,*)iter, b(1)
+    write(*,*) " using backward", T3-T2
+
+!===================================
+    do iter=1,niter
+       b = 3.
+    enddo
+    call CPU_TIME(T4)
+    write (*,*)iter, b(1)
+    write(*,*) " using a=0    ", T4-T3
+!===================================
+
+    call CPU_TIME(T8)
+    do iter=1,niter
+       call fmemset(b,n*n*4) 
+    enddo
+    call CPU_TIME(T9)
+    write (*,*) iter, b(1)
+    write(*,*) " using memset ", T9-T8
+!===================================
+end program Albert
+
+
