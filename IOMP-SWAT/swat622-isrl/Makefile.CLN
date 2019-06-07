@@ -1,0 +1,3 @@
+#Excluded files: main.o modparm.o
+CLN=$(OBJ77) $(OBJ90)  grow.o tran.o
+ 

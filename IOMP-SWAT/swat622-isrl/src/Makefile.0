@@ -1,0 +1,19 @@
+include Makefile.INC 
+
+all:
+	cd src && make all 
+prl:
+	cd src && make mod; make cmp -j 8 ; make cmpgt ; make lib ; make exe
+install: copy
+	cp $(exefile) ../../binary/
+	cp $(libfile) ../../library/
+
+uninstall: uncopy 
+copy:
+	cd src && make copy 
+
+uncopy:
+	rm -f $(exefile) $(libfile)
+
+allclean:
+	cd src && make allclean
