@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"><title>iomp-swat-622</title>
+	
+	<meta name="generator" content="LibreOffice 4.2.7.2 (Linux)">
+	<meta name="created" content="0;0">
+	<meta name="changed" content="20150131;82047370366026">
+	<style type="text/css">
+	<!--
+		h2.cjk { font-family: "Droid Sans Fallback" }
+		h2.ctl { font-family: "FreeSans" }
+	-->
+	</style></head><body dir="ltr" style="background: transparent none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" lang="en-US">
+<p><br><br>
+</p>
+<h1>iOMP-SWAT-622</h1>
+<h2 class="western">Paper information</h2>
+<ul>
+  <li>Full title: OpenMP-accelerated SWAT simulation using Intel C and FORTRAN compilers: Development and benchmark</li>
+  <li>Authors: Seo Jin Ki, Tak Sugimura,
+	and Albert S. Kim</li>
+  <li>Journal: <a href="http://www.sciencedirect.com/science/journal/00983004" target="_blank">Computers
+	and Geosciences</a></li>
+<li>Volume: 75</li><li>Year: 2015</li><li>Pages: 66-72</li>
+  <li>URL:&nbsp;
+	<a href="http://www.sciencedirect.com/science/article/pii/S0098300414002507" target="_blank">doi:10.1016/j.cageo.2014.10.017</a><a href="http://www.sciencedirect.com/science/article/pii/S0098300414002507" target="_blank">
+	</a>
+	</li>
+<li>
+	Abstract:</li>
+  <ul>
+    <li>We developed a practical method to
+	accelerate execution of Soil and Water Assessment Tool (SWAT) using
+	open (free) computational resources. The SWAT source code (rev 622)
+	was recompiled using a noncommercial Intel FORTRAN compiler in
+	Ubuntu 12.04 LTS Linux platform, and newly named iOMP-SWAT in this
+	study. GNU utilities of make, gprof, and diff were used to develop
+	the iOMP-SWAT package, profile memory usage, and check identicalness
+	of parallel and serial simulations. Among 302 SWAT subroutines, the
+	slowest routines were identified using GNU gprof, and later modified
+	using Open Multiple Processing (OpenMP) library in an 8-core shared
+	memory system. In addition, a C wrapping function was used to
+	rapidly set large arrays to zero by cross compiling with the
+	original SWAT FORTRAN package. A universal speedup ratio of 2.3 was
+	achieved using input data sets of a large number of hydrological
+	response units. As we specifically focus on acceleration of a single
+	SWAT run, the use of iOMPSWAT for parameter calibrations will
+	significantly improve the performance of SWAT optimization. <br>
+    </li>
+  </ul>
+</ul>
+<h2 class="western">Summary</h2><ul>
+  <li>Source distribution:</li>
+<li>Structure</li>
+  <ul>
+    <li>Main program: main.f&nbsp;</li>
+<li>Module file: modparm.f</li>
+    <li>Dynamic allocation:
+		allocate_parms.f</li>
+  </ul>
+  <li>Number of files</li>
+  <ul>
+    <li>f77: 299</li>
+    <li>f90: 3 (NCsed_leach.f90,&nbsp;
+		carbon_zhang2.f90, and&nbsp; hruday.f90) <br>
+    </li>
+  </ul>
+  <li>Reference data</li>
+  <li>Key changes and additions</li>
+  <ul>
+    <li>fmemset.c <br>
+    </li>
+    <ul>
+      <li>A short code is below. <br>
+      </li>
+    </ul>
+    <li>varinit.f</li>
+  </ul>
+  <li>Directory structure<br>
+.<br>
+├── IOMP-SWAT<br>
+│&nbsp;&nbsp; ├── bin<br>
+│&nbsp;&nbsp; ├── lib<br>
+│&nbsp;&nbsp; ├── swat622-gsrl<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── src<br>
+│&nbsp;&nbsp; ├── swat622-iomp<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── src<br>
+│&nbsp;&nbsp; ├── swat622-isrl<br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── src<br>
+│&nbsp;&nbsp; ├── swatDiffFile<br>
+│&nbsp;&nbsp; └── swatMakefile<br>
+├── data<br>
+└── fmemset<br>
+&nbsp;&nbsp;&nbsp; ├── fmemset1D<br>
+&nbsp;&nbsp;&nbsp; └── fmemset2D<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── org<br>
+    <br>
+  </li>
+  <ul>
+    <li><br>
+    </li>
+  </ul>
+  <li>Makefile</li>
+  <ul>
+    <li><br>
+    </li>
+  </ul>
+</ul><p><br><br>
+</p>
+</body></html>
